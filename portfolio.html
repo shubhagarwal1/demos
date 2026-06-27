@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shubh Agarwal — Websites & AI Assistants for Local Business</title>
+<meta name="description" content="Full-stack developer building fast, modern websites and AI assistants for local businesses — designed, built, and delivered in one day." />
+<style>
+  :root{
+    --bg:#070a10; --bg2:#0c111b; --card:#101620; --line:#1c2632;
+    --text:#eef3f9; --muted:#93a0b2; --dim:#5d6878;
+    --accent:#00e0c6; --accent2:#3b82f6; --accent3:#a855f7;
+    --glow:0 0 40px rgba(0,224,198,.25);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+    background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;
+  }
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+  /* ambient background */
+  .glow1,.glow2,.glow3{position:fixed;border-radius:50%;filter:blur(120px);opacity:.30;z-index:0;pointer-events:none}
+  .glow1{width:520px;height:520px;background:var(--accent);top:-180px;left:-120px}
+  .glow2{width:480px;height:480px;background:var(--accent3);top:30%;right:-160px;opacity:.22}
+  .glow3{width:420px;height:420px;background:var(--accent2);bottom:-140px;left:30%;opacity:.18}
+  .content{position:relative;z-index:1}
+
+  /* nav */
+  nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+  .logo{font-weight:800;letter-spacing:.5px;font-size:18px}
+  .logo b{color:var(--accent)}
+  .nav-links{display:flex;gap:26px;font-size:14.5px;color:var(--muted)}
+  .nav-links a:hover{color:var(--text)}
+  .nav-cta{background:var(--accent);color:#04201c;padding:9px 18px;border-radius:30px;font-weight:700;font-size:14px}
+  .nav-cta:hover{filter:brightness(1.08)}
+
+  /* hero */
+  .hero{padding:70px 0 56px;max-width:860px}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(0,224,198,.08);border:1px solid rgba(0,224,198,.3);
+    color:var(--accent);padding:8px 16px;border-radius:30px;font-size:13px;font-weight:600;margin-bottom:26px}
+  .pill .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 10px var(--accent);animation:blink 1.8s infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+  h1{font-size:clamp(38px,6vw,68px);line-height:1.05;font-weight:800;letter-spacing:-1.5px;margin-bottom:22px}
+  h1 .grad{background:linear-gradient(110deg,var(--accent),var(--accent2) 60%,var(--accent3));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .lead{font-size:clamp(17px,2.2vw,21px);color:var(--muted);max-width:680px;margin-bottom:34px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 26px;border-radius:12px;font-weight:700;font-size:15.5px;transition:.18s}
+  .btn-primary{background:linear-gradient(100deg,var(--accent),var(--accent2));color:#04201c;box-shadow:var(--glow)}
+  .btn-primary:hover{transform:translateY(-2px)}
+  .btn-ghost{border:1px solid var(--line);color:var(--text)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* stats strip */
+  .strip{display:flex;gap:48px;flex-wrap:wrap;padding:30px 0 10px;border-top:1px solid var(--line);margin-top:48px}
+  .strip .item .n{font-size:30px;font-weight:800;background:linear-gradient(110deg,var(--accent),var(--accent3));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+  .strip .item .l{font-size:13px;color:var(--muted);letter-spacing:.4px}
+
+  /* section heading */
+  .sec{padding:74px 0 10px}
+  .eyebrow{color:var(--accent);font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:12px}
+  .sec h2{font-size:clamp(28px,4vw,42px);font-weight:800;letter-spacing:-1px;margin-bottom:14px}
+  .sec .sub{color:var(--muted);max-width:620px;font-size:16.5px;margin-bottom:40px}
+
+  /* work grid */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:26px}
+  .project{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.22s;position:relative}
+  .project:hover{transform:translateY(-6px);border-color:rgba(0,224,198,.45);box-shadow:0 18px 50px rgba(0,0,0,.5)}
+  .preview{position:relative;height:230px;overflow:hidden;background:#0a0e15;border-bottom:1px solid var(--line)}
+  .preview iframe{position:absolute;top:0;left:0;width:1280px;height:920px;border:0;
+    transform:scale(.36);transform-origin:top left;pointer-events:none}
+  .preview .veil{position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(7,10,16,0) 60%,rgba(7,10,16,.6))}
+  .preview .open{position:absolute;z-index:3;top:14px;right:14px;background:rgba(7,10,16,.7);backdrop-filter:blur(6px);
+    border:1px solid var(--line);color:var(--text);font-size:12px;font-weight:600;padding:7px 13px;border-radius:30px;opacity:0;transition:.2s}
+  .project:hover .open{opacity:1}
+  .pbody{padding:20px 22px 24px}
+  .ptag{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:1px;text-transform:uppercase}
+  .ptitle{font-size:20px;font-weight:700;margin:6px 0 8px}
+  .pdesc{color:var(--muted);font-size:14.5px;min-height:44px}
+  .plink{display:inline-flex;align-items:center;gap:7px;margin-top:14px;color:var(--accent);font-weight:600;font-size:14.5px}
+  .plink:hover{gap:11px}
+
+  /* services */
+  .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+  .svc{background:linear-gradient(165deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:18px;padding:30px 26px}
+  .svc .ico{font-size:30px;margin-bottom:16px}
+  .svc h3{font-size:19px;margin-bottom:10px}
+  .svc p{color:var(--muted);font-size:14.5px}
+
+  /* CTA band */
+  .band{margin:90px 0 30px;background:linear-gradient(120deg,rgba(0,224,198,.10),rgba(168,85,247,.10));
+    border:1px solid var(--line);border-radius:24px;padding:56px 40px;text-align:center}
+  .band h2{font-size:clamp(26px,4vw,38px);font-weight:800;letter-spacing:-1px;margin-bottom:14px}
+  .band p{color:var(--muted);font-size:17px;max-width:520px;margin:0 auto 30px}
+
+  footer{border-top:1px solid var(--line);margin-top:60px;padding:34px 0;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:16px;color:var(--dim);font-size:14px}
+  footer a:hover{color:var(--accent)}
+
+  @media(max-width:640px){.nav-links{display:none}.strip{gap:30px}}
+</style>
+</head>
+<body>
+<div class="glow1"></div><div class="glow2"></div><div class="glow3"></div>
+
+<div class="content">
+<div class="wrap">
+
+  <nav>
+    <div class="logo">SHUBH<b>.</b></div>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">Let's talk →</a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="pill"><span class="dot"></span> Available for new projects</div>
+    <h1>I build <span class="grad">fast, modern websites</span> for businesses that deserve to look great online.</h1>
+    <p class="lead">Full-stack developer crafting clean websites and AI customer assistants for local businesses — designed, built, and delivered in as little as <b style="color:var(--text)">one day</b>.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#contact">Start a project ⚡</a>
+      <a class="btn btn-ghost" href="#work">See my work</a>
+    </div>
+
+    <div class="strip">
+      <div class="item"><div class="n">1&nbsp;day</div><div class="l">Typical delivery</div></div>
+      <div class="item"><div class="n">6+</div><div class="l">Sites built</div></div>
+      <div class="item"><div class="n">100%</div><div class="l">Custom, not templates</div></div>
+      <div class="item"><div class="n">24/7</div><div class="l">AI assistants that never sleep</div></div>
+    </div>
+  </header>
+
+  <!-- WORK -->
+  <section class="sec" id="work">
+    <div class="eyebrow">Selected Work</div>
+    <h2>Real sites, built for real businesses.</h2>
+    <p class="sub">Live previews below — every one is a fully responsive, hand-built page. Click any card to open it.</p>
+    <div class="grid" id="projectGrid"></div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec" id="services">
+    <div class="eyebrow">What I Do</div>
+    <h2>Everything a local business needs to win online.</h2>
+    <div class="svc-grid">
+      <div class="svc"><div class="ico">🎨</div><h3>Custom Websites</h3><p>Fast, modern, mobile-first sites built around your brand — not a cookie-cutter template. Menus, booking, galleries, lead forms.</p></div>
+      <div class="svc"><div class="ico">🤖</div><h3>AI Assistants</h3><p>A custom assistant that answers your customers 24/7 — books appointments, replies to questions, never misses a lead while you're busy.</p></div>
+      <div class="svc"><div class="ico">⚡</div><h3>Same-Day Delivery</h3><p>See your business online today, not in three weeks. I move fast, show you a working version first, and iterate live.</p></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="band" id="contact">
+    <h2>Let's get your business online — fast.</h2>
+    <p>Tell me about your business and I'll send back a working design. No long contracts, no waiting.</p>
+    <a class="btn btn-primary" id="emailBtn" href="mailto:shubh@samaro.ai?subject=I%20want%20a%20website">📩 Email me</a>
+  </section>
+
+  <footer>
+    <div>© <span id="yr"></span> Shubh Agarwal — Full-Stack Developer</div>
+    <div style="display:flex;gap:22px">
+      <a href="https://github.com/shubhagarwal1" target="_blank">GitHub ↗</a>
+      <a href="mailto:shubh@samaro.ai">Email ↗</a>
+    </div>
+  </footer>
+
+</div>
+</div>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  const PROJECTS = [
+    {file:'houseofhair.html', tag:'Salon', title:'House of Hair', desc:'Elegant salon site with services, gallery, and an easy booking flow.'},
+    {file:'bohemians-cafe.html', tag:'Cafe', title:'Bohemians Cafe', desc:'Warm, inviting cafe page with menu highlights and ambiance.'},
+    {file:'iron-jawz-gym.html', tag:'Fitness', title:'Iron Jawz Gym', desc:'Bold, high-energy gym landing page built to drive sign-ups.'},
+    {file:'0141-cafe.html', tag:'Cafe', title:'0141 Cafe', desc:'Clean, minimal coffee-shop site that puts the menu front and center.'},
+    {file:'shubh-nivesh-realtors.html', tag:'Real Estate', title:'Shubh Nivesh Realtors', desc:'Property showcase with listings and a built-in lead-capture form.'},
+    {file:'us-eatery-template.html', tag:'Restaurant', title:'US Eatery', desc:'Modern restaurant template with menu, hours, and reservations.'},
+  ];
+
+  document.getElementById('projectGrid').innerHTML = PROJECTS.map(p => `
+    <a class="project" href="${p.file}" target="_blank">
+      <div class="preview">
+        <iframe src="${p.file}" loading="lazy" scrolling="no" title="${p.title} preview"></iframe>
+        <div class="veil"></div>
+        <div class="open">Open live ↗</div>
+      </div>
+      <div class="pbody">
+        <div class="ptag">${p.tag}</div>
+        <div class="ptitle">${p.title}</div>
+        <div class="pdesc">${p.desc}</div>
+        <span class="plink">View live site →</span>
+      </div>
+    </a>`).join('');
+</script>
+</body>
+</html>
