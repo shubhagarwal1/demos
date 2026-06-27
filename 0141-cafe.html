@@ -1,0 +1,238 @@
+<title>The 0141 Café — Website Preview</title>
+<meta name="description" content="Website preview crafted for The 0141 Café, Jagatpura, Jaipur — by Shubh Agarwal.">
+
+<style>
+  :root{
+    --ground:#17120f;
+    --ground-2:#1f1813;
+    --ivory:#f6efe2;
+    --ivory-dim:#cabea9;
+    --saffron:#e7a531;
+    --saffron-d:#c4861d;
+    --chili:#b3362b;
+    --chili-d:#7e231b;
+    --herb:#79a356;
+    --line:rgba(231,165,49,.22);
+    --maxw:820px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;background:var(--ground);color:var(--ivory);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.62;-webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  h1,h2,h3{margin:0;line-height:1.05;text-wrap:balance;}
+
+  /* pitch banner */
+  .note{background:#0e0a08;border-bottom:1px solid var(--line);text-align:center;
+    font-size:13px;color:var(--ivory-dim);padding:11px 18px;}
+  .note b{color:var(--saffron);}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;padding:56px 0 50px;text-align:center;
+    background:
+      radial-gradient(110% 75% at 50% -5%, rgba(231,165,49,.18), transparent 55%),
+      linear-gradient(180deg,var(--ground-2),var(--ground));}
+  .bignum{font-size:clamp(110px,34vw,230px);font-weight:900;letter-spacing:-.04em;
+    line-height:.8;color:transparent;-webkit-text-stroke:2px rgba(231,165,49,.35);
+    text-stroke:2px rgba(231,165,49,.35);user-select:none;}
+  .hero h1{font-size:clamp(30px,8vw,52px);font-weight:800;letter-spacing:-.02em;margin-top:6px;}
+  .hero h1 .amp{color:var(--saffron);}
+  .place{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--saffron);margin-top:18px;}
+  .rate{display:inline-flex;align-items:center;gap:9px;margin-top:22px;
+    background:rgba(231,165,49,.12);border:1px solid var(--line);border-radius:999px;
+    padding:8px 16px;font-size:14px;color:var(--ivory);}
+  .rate .stars{color:var(--saffron);letter-spacing:1px;}
+  .rate b{font-weight:800;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:700;
+    padding:13px 26px;border-radius:10px;text-decoration:none;cursor:pointer;
+    transition:transform .12s,background .15s,color .15s;}
+  .btn:active{transform:translateY(1px);}
+  .btn-solid{background:var(--saffron);color:#231708;}
+  .btn-solid:hover{background:#f4b545;}
+  .btn-out{border:1px solid var(--line);color:var(--ivory);}
+  .btn-out:hover{background:rgba(231,165,49,.1);}
+
+  /* info strip */
+  .strip{display:grid;grid-template-columns:repeat(2,1fr);background:#0e0a08;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  @media(min-width:640px){.strip{grid-template-columns:repeat(4,1fr);}}
+  .strip>div{padding:20px 12px;text-align:center;border-right:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .strip .k{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--saffron);}
+  .strip .v{font-size:15px;margin-top:5px;}
+
+  section{padding:58px 0;}
+  .center{text-align:center;}
+  .kick{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--saffron);}
+  h2.sec{font-size:clamp(27px,6.5vw,40px);font-weight:800;letter-spacing:-.02em;margin-top:13px;}
+  .lede{color:var(--ivory-dim);margin:16px auto 0;max-width:52ch;font-size:16.5px;}
+
+  /* menu */
+  .menu{margin-top:34px;}
+  .dish{display:flex;align-items:baseline;gap:14px;padding:18px 4px;border-bottom:1px dashed var(--line);}
+  .dish:first-child{border-top:1px dashed var(--line);}
+  .dish .nm{font-size:18px;font-weight:600;}
+  .dish .veg{display:inline-block;width:13px;height:13px;border:1.5px solid var(--herb);border-radius:3px;position:relative;margin-right:9px;vertical-align:middle;}
+  .dish .veg::after{content:"";position:absolute;inset:2.5px;background:var(--herb);border-radius:50%;}
+  .dish .tag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--chili);margin-left:9px;font-weight:700;}
+  .dish .ds{display:block;font-size:13.5px;color:var(--ivory-dim);margin-top:4px;padding-left:22px;}
+  .dish .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:16px;}
+  .dish .pr{font-size:17px;font-weight:700;color:var(--saffron);font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .mnote{text-align:center;font-size:12.5px;color:var(--ivory-dim);margin-top:20px;opacity:.8;}
+
+  /* celebrations */
+  .celebrate{background:linear-gradient(135deg,var(--chili-d),#4d150f);text-align:center;}
+  .celebrate .kick{color:#f6c9a0;}
+  .celebrate h2.sec,.celebrate .lede{color:#fff;}
+  .celebrate .lede{opacity:.92;}
+
+  /* gallery */
+  .gal{background:#0e0a08;}
+  .tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:30px;}
+  @media(min-width:640px){.tiles{grid-template-columns:repeat(3,1fr);}}
+  .tile{aspect-ratio:4/3;border-radius:10px;border:1px solid var(--line);
+    display:flex;align-items:flex-end;padding:14px;font-size:12px;letter-spacing:.06em;
+    text-transform:uppercase;color:rgba(255,255,255,.9);font-weight:600;}
+  .t1{background:linear-gradient(150deg,var(--saffron-d),#7a4f10);}
+  .t2{background:linear-gradient(150deg,var(--chili),#5e1812);}
+  .t3{background:linear-gradient(150deg,var(--herb),#3f5e28);}
+  .t4{background:linear-gradient(150deg,#c97a2c,#6e3d12);}
+  .t5{background:linear-gradient(150deg,#7a5230,#3a2415);}
+  .t6{background:linear-gradient(150deg,#a8863e,#5c4416);}
+  .gnote{text-align:center;font-size:12.5px;color:var(--ivory-dim);margin-top:18px;opacity:.8;}
+
+  /* find */
+  .find{background:linear-gradient(180deg,var(--ground-2),var(--ground));text-align:center;}
+  .links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px;}
+  .addr{color:var(--ivory-dim);margin-top:22px;font-size:15px;}
+
+  /* pitch footer */
+  .pitch{background:var(--saffron);color:#231708;text-align:center;padding:48px 24px;}
+  .pitch .kick{color:rgba(35,23,8,.65);}
+  .pitch h3{font-size:clamp(23px,5.5vw,31px);font-weight:800;margin:12px auto 0;max-width:24ch;}
+  .pitch p{margin:14px auto 0;max-width:46ch;font-size:15.5px;color:rgba(35,23,8,.85);}
+  .btn-dark{background:#17120f;color:var(--saffron);margin-top:24px;}
+  .btn-dark:hover{background:#2a201a;}
+  .sig{margin-top:22px;font-size:14px;color:rgba(35,23,8,.82);}
+  .sig b{font-weight:800;}
+
+  footer.fin{background:#0e0a08;text-align:center;padding:22px;font-size:12px;color:var(--ivory-dim);}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
+</style>
+
+<div class="note">✦ <b>Preview website</b> crafted for The 0141 Café by Shubh — scroll to see how your café could look online.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="bignum" aria-hidden="true">0141</div>
+    <h1>The 0141 <span class="amp">Café</span></h1>
+    <div class="place">Jagatpura · Jaipur</div>
+    <div class="rate"><span class="stars">★★★★☆</span> <b>4.1</b> · 1,008 diner reviews</div>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#menu">View Menu</a>
+      <a class="btn btn-out" href="#celebrate">Plan a Celebration</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div><div class="k">Rated</div><div class="v">4.1 ★ · 1000+</div></div>
+  <div><div class="k">Cuisine</div><div class="v">North Indian · Biryani</div></div>
+  <div><div class="k">Best for</div><div class="v">Parties & Birthdays</div></div>
+  <div><div class="k">Where</div><div class="v">Jagatpura</div></div>
+</div>
+
+<section class="center">
+  <div class="wrap">
+    <span class="kick">Welcome</span>
+    <h2 class="sec">Jaipur's flavours, served with heart</h2>
+    <p class="lede">Loved by over a thousand diners, The 0141 Café brings you rich North Indian classics, fragrant biryanis and the warmest spot in Jagatpura to gather, eat and celebrate.</p>
+  </div>
+</section>
+
+<section id="menu" style="padding-top:0;">
+  <div class="wrap">
+    <div class="center">
+      <span class="kick">From Our Kitchen</span>
+      <h2 class="sec">Signature Dishes</h2>
+    </div>
+    <div class="menu">
+      <div class="dish">
+        <span class="nm"><span class="veg"></span>Hyderabadi Veg Dum Biryani<span class="tag">Most Loved</span><span class="ds">Slow-cooked basmati, whole spices, served with raita</span></span>
+        <span class="dots"></span><span class="pr">₹260</span>
+      </div>
+      <div class="dish">
+        <span class="nm"><span class="veg"></span>Paneer Butter Masala<span class="tag">Signature</span><span class="ds">Rich tomato-cream gravy, soft cottage cheese</span></span>
+        <span class="dots"></span><span class="pr">₹240</span>
+      </div>
+      <div class="dish">
+        <span class="nm"><span class="veg"></span>Dal Makhani<span class="ds">Slow-simmered black lentils, butter &amp; cream</span></span>
+        <span class="dots"></span><span class="pr">₹210</span>
+      </div>
+      <div class="dish">
+        <span class="nm"><span class="veg"></span>Tandoori Platter<span class="ds">Assorted chargrilled tikkas, fresh from the clay oven</span></span>
+        <span class="dots"></span><span class="pr">₹320</span>
+      </div>
+      <div class="dish">
+        <span class="nm"><span class="veg"></span>Butter Naan &amp; Breads<span class="ds">Fresh from the tandoor, soft and flaky</span></span>
+        <span class="dots"></span><span class="pr">₹60</span>
+      </div>
+    </div>
+    <p class="mnote">A taste of the menu · prices illustrative for this preview</p>
+  </div>
+</section>
+
+<section class="celebrate" id="celebrate">
+  <div class="wrap">
+    <span class="kick">Celebrations</span>
+    <h2 class="sec">Birthdays &amp; parties, sorted</h2>
+    <p class="lede">From surprise birthdays to family get-togethers, The 0141 Café sets the perfect table. Decor, food and a warm welcome — you bring the people, we handle the rest.</p>
+    <div class="cta-row" style="justify-content:center;">
+      <a class="btn btn-solid" href="#find">Enquire about Bookings</a>
+    </div>
+  </div>
+</section>
+
+<section class="gal">
+  <div class="wrap center">
+    <span class="kick">A Look Inside</span>
+    <h2 class="sec">The 0141 experience</h2>
+    <div class="tiles" aria-hidden="true">
+      <div class="tile t1">Biryani</div>
+      <div class="tile t2">Tandoor</div>
+      <div class="tile t3">Fresh &amp; veg</div>
+      <div class="tile t4">Cosy seating</div>
+      <div class="tile t5">Celebrations</div>
+      <div class="tile t6">Café corner</div>
+    </div>
+    <p class="gnote">↑ Your real food &amp; interior photos will fill these frames in the final website</p>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <span class="kick">Find Us</span>
+    <h2 class="sec">Drop by, or order in</h2>
+    <p class="lede">Open daily in Jagatpura — dine in, take away, or order online.</p>
+    <div class="links">
+      <a class="btn btn-solid" href="https://www.zomato.com/jaipur/the-0141-cafe-pratap-nagar" target="_blank" rel="noopener">Order on Zomato</a>
+      <a class="btn btn-out" href="https://www.swiggy.com/city/jaipur/0141-restaurant-jagatpura-rest158298" target="_blank" rel="noopener">Order on Swiggy</a>
+    </div>
+    <p class="addr">73-74, Sriram Vihar, Near Akshayapatra, Jagatpura, Jaipur – 302017</p>
+  </div>
+</section>
+
+<section class="pitch">
+  <span class="kick">A note for the owner</span>
+  <h3>Like it? This can be your live website this week.</h3>
+  <p>I built this preview specially for The 0141 Café. With your own website, people searching "café in Jagatpura" find <b>you</b> first — your menu, your photos, online table & party bookings, no commission to anyone. Let's make it live.</p>
+  <a class="btn btn-dark" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Shubh%2C%20I%20saw%20the%20website%20preview%20for%20The%200141%20Caf%C3%A9%20%E2%80%94%20let%27s%20talk">Message Shubh on WhatsApp</a>
+  <div class="sig">— <b>Shubh Agarwal</b> · Web Developer · shubh@samaro.ai</div>
+</section>
+
+<footer class="fin">
+  This is a design preview made for The 0141 Café and is not an official page of the café.
+</footer>

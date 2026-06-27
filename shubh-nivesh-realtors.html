@@ -1,0 +1,249 @@
+<title>Shubh Nivesh Realtors — Website Preview</title>
+<meta name="description" content="Website preview crafted for Shubh Nivesh Realtors, Jaipur — by Shubh Agarwal.">
+
+<style>
+  :root{
+    --ink:#12262c;
+    --ink-2:#1b343b;
+    --gold:#bf9648;
+    --gold-d:#9c7831;
+    --bone:#f6f2e9;
+    --bone-2:#ece5d5;
+    --paper:#fffdf8;
+    --slate:#5c6a6d;
+    --line:#e3dccb;
+    --maxw:900px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bone);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  h1,h2,h3{margin:0;line-height:1.08;text-wrap:balance;}
+
+  .note{background:var(--ink);color:#cfe0df;text-align:center;font-size:13px;padding:11px 18px;border-bottom:1px solid rgba(191,150,72,.3);}
+  .note b{color:var(--gold);}
+
+  /* hero */
+  .hero{background:
+      radial-gradient(120% 80% at 85% -10%, rgba(191,150,72,.22), transparent 50%),
+      linear-gradient(180deg,var(--ink),var(--ink-2));
+    color:#f3efe6;padding:60px 0 56px;}
+  .brandline{display:flex;align-items:center;gap:12px;font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);}
+  .brandline::before{content:"";width:34px;height:1px;background:var(--gold);}
+  .hero h1{font-size:clamp(34px,8vw,58px);font-weight:500;margin:18px 0 0;color:#fff;}
+  .hero h1 em{font-style:italic;color:var(--gold);}
+  .hero .sub{font-size:clamp(16px,4vw,19px);color:#c4d2d1;margin:20px 0 0;max-width:42ch;}
+  .areas{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
+  .areas span{font-size:13px;border:1px solid rgba(191,150,72,.4);color:#e7ddcb;border-radius:999px;padding:6px 14px;}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:600;
+    padding:13px 26px;border-radius:7px;text-decoration:none;cursor:pointer;
+    transition:transform .12s,background .15s,color .15s;}
+  .btn:active{transform:translateY(1px);}
+  .btn-solid{background:var(--gold);color:var(--ink);}
+  .btn-solid:hover{background:#d2ab5c;}
+  .btn-out{border:1px solid rgba(243,239,230,.35);color:#f3efe6;}
+  .btn-out:hover{background:rgba(243,239,230,.1);}
+
+  /* trust strip */
+  .strip{display:grid;grid-template-columns:repeat(2,1fr);background:var(--paper);border-bottom:1px solid var(--line);}
+  @media(min-width:640px){.strip{grid-template-columns:repeat(4,1fr);}}
+  .strip>div{padding:24px 14px;text-align:center;border-right:1px solid var(--line);}
+  .strip .v{font-size:24px;font-weight:700;color:var(--ink);}
+  .strip .v .serif{font-weight:500;}
+  .strip .k{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate);margin-top:6px;}
+
+  section{padding:60px 0;}
+  .center{text-align:center;}
+  .kick{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-d);}
+  h2.sec{font-size:clamp(27px,6vw,38px);font-weight:500;margin-top:13px;}
+  .lede{color:var(--slate);margin:16px auto 0;max-width:54ch;font-size:16.5px;}
+
+  /* listings */
+  .listings{display:grid;gap:18px;margin-top:36px;}
+  @media(min-width:680px){.listings{grid-template-columns:repeat(3,1fr);}}
+  .prop{background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;}
+  .prop .photo{aspect-ratio:4/3;position:relative;display:flex;align-items:flex-end;padding:12px;}
+  .p1{background:linear-gradient(150deg,#3a6b6d,#1d3b3d);}
+  .p2{background:linear-gradient(150deg,#9c7831,#5e4818);}
+  .p3{background:linear-gradient(150deg,#5a6b8a,#2f3a52);}
+  .prop .photo .lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:rgba(18,38,44,.55);border-radius:999px;padding:4px 11px;}
+  .prop .body{padding:18px;}
+  .prop h3{font-size:18px;font-weight:600;}
+  .prop .loc{font-size:13.5px;color:var(--slate);margin-top:3px;}
+  .prop .price{font-size:19px;font-weight:700;color:var(--gold-d);margin-top:12px;font-variant-numeric:tabular-nums;}
+  .prop .meta{display:flex;gap:14px;margin-top:12px;font-size:13px;color:var(--slate);border-top:1px solid var(--line);padding-top:12px;}
+  .lnote{text-align:center;font-size:12.5px;color:var(--slate);margin-top:22px;opacity:.85;}
+
+  /* services */
+  .svc{background:var(--bone-2);}
+  .grid{display:grid;gap:14px;margin-top:34px;}
+  @media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr);}}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:22px;}
+  .card .ic{width:40px;height:40px;border-radius:9px;background:var(--ink);display:grid;place-items:center;margin-bottom:14px;}
+  .card .ic svg{width:21px;height:21px;stroke:var(--gold);fill:none;stroke-width:1.8;}
+  .card h3{font-size:17px;font-weight:600;}
+  .card p{margin:6px 0 0;font-size:14.5px;color:var(--slate);}
+
+  /* why */
+  .why{text-align:center;}
+  .pts{display:grid;gap:16px;margin-top:34px;text-align:left;}
+  @media(min-width:640px){.pts{grid-template-columns:repeat(3,1fr);}}
+  .pt{display:flex;gap:12px;align-items:flex-start;}
+  .pt .n{flex:none;font-family:"Iowan Old Style",Georgia,serif;font-size:15px;color:var(--gold-d);border:1px solid var(--gold);border-radius:50%;width:34px;height:34px;display:grid;place-items:center;}
+  .pt h3{font-size:16px;font-weight:600;}
+  .pt p{margin:4px 0 0;font-size:14px;color:var(--slate);}
+
+  /* contact */
+  .contact{background:var(--ink);color:#f3efe6;text-align:center;}
+  .contact .kick{color:var(--gold);}
+  .contact h2.sec{color:#fff;}
+  .contact .lede{color:#c4d2d1;}
+  .contact .cta-row{justify-content:center;}
+
+  /* pitch */
+  .pitch{background:var(--gold);color:var(--ink);text-align:center;padding:48px 24px;}
+  .pitch .kick{color:rgba(18,38,44,.6);}
+  .pitch h3{font-size:clamp(23px,5.5vw,31px);font-weight:600;margin:12px auto 0;max-width:25ch;}
+  .pitch p{margin:14px auto 0;max-width:46ch;font-size:15.5px;color:rgba(18,38,44,.82);}
+  .btn-dark{background:var(--ink);color:var(--gold);margin-top:24px;}
+  .btn-dark:hover{background:var(--ink-2);}
+  .sig{margin-top:22px;font-size:14px;color:rgba(18,38,44,.8);}
+  .sig b{font-weight:700;}
+
+  footer.fin{background:var(--ink-2);text-align:center;padding:22px;font-size:12px;color:#9fb1b0;}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
+</style>
+
+<div class="note">✦ <b>Preview website</b> crafted for Shubh Nivesh Realtors by Shubh Agarwal — scroll to see your agency online.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="brandline">Real Estate · Jaipur</div>
+    <h1 class="serif">Shubh Nivesh <em>Realtors</em></h1>
+    <p class="sub">Your trusted partner for buying, selling and renting property across Jaipur — honest advice, the right deal, every time.</p>
+    <div class="areas">
+      <span>Mansarovar</span><span>Vaishali Nagar</span><span>Narayan Vihar</span><span>Ajmer Road</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#listings">View Properties</a>
+      <a class="btn btn-out" href="#contact">Talk to Us</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div><div class="v serif">4+</div><div class="k">Prime areas</div></div>
+  <div><div class="v serif">Buy · Sell</div><div class="k">& Rent</div></div>
+  <div><div class="v serif">Plots</div><div class="k">Homes · Commercial</div></div>
+  <div><div class="v serif">Local</div><div class="k">Jaipur experts</div></div>
+</div>
+
+<section id="listings">
+  <div class="wrap">
+    <div class="center">
+      <span class="kick">Featured</span>
+      <h2 class="sec serif">Properties on offer</h2>
+      <p class="lede">A glimpse of what we help clients buy and sell across Jaipur.</p>
+    </div>
+    <div class="listings">
+      <div class="prop">
+        <div class="photo p1"><span class="lbl">For Sale</span></div>
+        <div class="body">
+          <h3 class="serif">3 BHK Independent House</h3>
+          <div class="loc">Vaishali Nagar, Jaipur</div>
+          <div class="price">₹95 Lakh</div>
+          <div class="meta"><span>3 Beds</span><span>3 Baths</span><span>1800 sq.ft</span></div>
+        </div>
+      </div>
+      <div class="prop">
+        <div class="photo p2"><span class="lbl">Residential Plot</span></div>
+        <div class="body">
+          <h3 class="serif">Residential Plot</h3>
+          <div class="loc">Ajmer Road, Jaipur</div>
+          <div class="price">₹42 Lakh</div>
+          <div class="meta"><span>200 sq.yd</span><span>JDA Approved</span></div>
+        </div>
+      </div>
+      <div class="prop">
+        <div class="photo p3"><span class="lbl">For Rent</span></div>
+        <div class="body">
+          <h3 class="serif">2 BHK Apartment</h3>
+          <div class="loc">Mansarovar, Jaipur</div>
+          <div class="price">₹18,000<span style="font-size:13px;font-weight:500;color:var(--slate);">/mo</span></div>
+          <div class="meta"><span>2 Beds</span><span>2 Baths</span><span>Furnished</span></div>
+        </div>
+      </div>
+    </div>
+    <p class="lnote">Sample listings &amp; photos for this preview — your real properties will appear here</p>
+  </div>
+</section>
+
+<section class="svc">
+  <div class="wrap center">
+    <span class="kick">What We Do</span>
+    <h2 class="sec serif">Everything property, handled</h2>
+    <div class="grid" style="text-align:left;">
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg></div>
+        <h3>Buy a Home</h3>
+        <p>Hand-picked houses, flats and plots that fit your budget and family.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2v20M5 9l7-7 7 7M5 15h14"/></svg></div>
+        <h3>Sell Your Property</h3>
+        <p>Right pricing, genuine buyers, and a smooth, transparent deal.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 7h18v13H3zM8 7V4h8v3"/></svg></div>
+        <h3>Rentals</h3>
+        <p>Furnished and unfurnished homes for rent across prime Jaipur areas.</p>
+      </div>
+      <div class="card">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4zM4 10h16M10 10v10"/></svg></div>
+        <h3>Plots &amp; Investment</h3>
+        <p>JDA-approved plots and investment advice you can trust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <span class="kick">Why Us</span>
+    <h2 class="sec serif">Trusted neighbours, not strangers</h2>
+    <div class="pts">
+      <div class="pt"><span class="n serif">1</span><div><h3>Local knowledge</h3><p>We know every lane, rate and society in our areas inside out.</p></div></div>
+      <div class="pt"><span class="n serif">2</span><div><h3>Honest dealings</h3><p>No hidden costs, no false promises — just straight advice.</p></div></div>
+      <div class="pt"><span class="n serif">3</span><div><h3>End to end</h3><p>From site visit to paperwork and loans, we're with you throughout.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <span class="kick">Get in Touch</span>
+    <h2 class="sec serif">Looking to buy, sell or rent?</h2>
+    <p class="lede">Tell us what you need and we'll find the right property — or the right buyer.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#">Call the Office</a>
+      <a class="btn btn-out" href="#">WhatsApp Us</a>
+    </div>
+    <p style="color:#9fb1b0;margin-top:22px;font-size:14px;">Serving Mansarovar · Vaishali Nagar · Narayan Vihar · Ajmer Road, Jaipur</p>
+  </div>
+</section>
+
+<section class="pitch">
+  <span class="kick">A note for the owner</span>
+  <h3>Like it? This can be your live website this week.</h3>
+  <p>I built this preview specially for Shubh Nivesh Realtors. With your own website, buyers searching "property in Mansarovar / Vaishali Nagar" find <b>you</b> — your listings, your number, your brand — instead of a portal that charges you for every lead. Let's make it live.</p>
+  <a class="btn btn-dark" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Shubh%2C%20I%20saw%20the%20website%20preview%20for%20Shubh%20Nivesh%20Realtors%20%E2%80%94%20let%27s%20talk">Message Shubh on WhatsApp</a>
+  <div class="sig">— <b>Shubh Agarwal</b> · Web Developer · shubh@samaro.ai</div>
+</section>
+
+<footer class="fin">
+  This is a design preview made for Shubh Nivesh Realtors and is not an official page of the agency.
+</footer>

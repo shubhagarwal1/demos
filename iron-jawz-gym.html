@@ -1,0 +1,241 @@
+<title>Iron Jawz Gym — Website Preview</title>
+<meta name="description" content="Website preview crafted for Iron Jawz Gym, Mansarovar, Jaipur — by Shubh Agarwal.">
+
+<style>
+  :root{
+    --bg:#0f1115;
+    --bg-2:#161a20;
+    --panel:#1c2129;
+    --white:#f5f6f7;
+    --mute:#98a0ab;
+    --fire:#ff5a1f;
+    --fire-2:#ff9420;
+    --steel:#384150;
+    --line:rgba(255,255,255,.10);
+    --maxw:920px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--white);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  h1,h2,h3{margin:0;line-height:1.02;text-wrap:balance;}
+  .display{font-weight:900;letter-spacing:-.02em;text-transform:uppercase;font-style:italic;}
+
+  .note{background:#000;color:#b9c0c9;text-align:center;font-size:13px;padding:11px 18px;border-bottom:1px solid var(--line);}
+  .note b{color:var(--fire-2);font-style:normal;}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;padding:64px 0 56px;
+    background:
+      radial-gradient(100% 70% at 80% 0%, rgba(255,90,31,.22), transparent 55%),
+      linear-gradient(180deg,var(--bg-2),var(--bg));}
+  .hero::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--fire),var(--fire-2));}
+  .tagtop{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--fire-2);font-weight:700;}
+  .hero h1{font-size:clamp(46px,14vw,104px);margin:14px 0 0;color:#fff;line-height:.86;}
+  .hero h1 .o{color:transparent;-webkit-text-stroke:2px var(--fire);text-stroke:2px var(--fire);}
+  .hero .loc{font-size:15px;color:var(--mute);margin-top:18px;letter-spacing:.05em;}
+  .hero .rate{display:inline-flex;align-items:center;gap:9px;margin-top:18px;background:rgba(255,255,255,.06);
+    border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:14px;}
+  .hero .rate .s{color:var(--fire-2);}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;
+    padding:14px 28px;border-radius:6px;text-decoration:none;cursor:pointer;
+    transition:transform .12s,filter .15s,background .15s;}
+  .btn:active{transform:translateY(1px);}
+  .btn-fire{background:linear-gradient(90deg,var(--fire),var(--fire-2));color:#1a0c03;}
+  .btn-fire:hover{filter:brightness(1.08);}
+  .btn-ghost{border:1px solid var(--line);color:#fff;}
+  .btn-ghost:hover{background:rgba(255,255,255,.08);}
+
+  /* strip */
+  .strip{display:grid;grid-template-columns:repeat(2,1fr);background:#000;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  @media(min-width:640px){.strip{grid-template-columns:repeat(4,1fr);}}
+  .strip>div{padding:22px 12px;text-align:center;border-right:1px solid var(--line);}
+  .strip .v{font-size:21px;font-weight:900;font-style:italic;color:#fff;}
+  .strip .v .f{color:var(--fire-2);}
+  .strip .k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-top:5px;}
+
+  section{padding:60px 0;}
+  .center{text-align:center;}
+  .kick{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--fire-2);font-weight:700;}
+  h2.sec{font-size:clamp(28px,7vw,46px);margin-top:12px;color:#fff;}
+  .lede{color:var(--mute);margin:15px auto 0;max-width:52ch;font-size:16.5px;}
+
+  /* programs */
+  .progs{display:grid;gap:14px;margin-top:36px;}
+  @media(min-width:560px){.progs{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:820px){.progs{grid-template-columns:repeat(3,1fr);}}
+  .prog{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px;position:relative;overflow:hidden;}
+  .prog::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(var(--fire),var(--fire-2));}
+  .prog .ic{width:42px;height:42px;border-radius:9px;background:rgba(255,90,31,.14);display:grid;place-items:center;margin-bottom:14px;}
+  .prog .ic svg{width:22px;height:22px;stroke:var(--fire-2);fill:none;stroke-width:2;}
+  .prog h3{font-size:17px;font-weight:800;text-transform:uppercase;letter-spacing:.02em;}
+  .prog p{margin:6px 0 0;font-size:14px;color:var(--mute);}
+
+  /* membership */
+  .mem{background:var(--bg-2);}
+  .plans{display:grid;gap:16px;margin-top:36px;}
+  @media(min-width:720px){.plans{grid-template-columns:repeat(3,1fr);}}
+  .plan{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px 22px;display:flex;flex-direction:column;}
+  .plan.best{border-color:var(--fire);box-shadow:0 14px 40px -18px rgba(255,90,31,.6);position:relative;}
+  .plan.best::before{content:"Best Value";position:absolute;top:-11px;left:22px;background:linear-gradient(90deg,var(--fire),var(--fire-2));color:#1a0c03;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:3px 12px;border-radius:999px;}
+  .plan .pn{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);}
+  .plan .pa{font-size:34px;font-weight:900;font-style:italic;margin:10px 0 2px;font-variant-numeric:tabular-nums;}
+  .plan .pa small{font-size:14px;font-weight:600;color:var(--mute);font-style:normal;}
+  .plan ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-direction:column;gap:10px;}
+  .plan li{display:flex;gap:9px;font-size:14.5px;color:#d7dbe0;}
+  .plan li svg{flex:none;width:17px;height:17px;stroke:var(--fire-2);fill:none;stroke-width:2.6;margin-top:3px;}
+  .mnote{text-align:center;font-size:12.5px;color:var(--mute);margin-top:22px;opacity:.85;}
+
+  /* gallery */
+  .gal{}
+  .tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:30px;}
+  @media(min-width:640px){.tiles{grid-template-columns:repeat(4,1fr);}}
+  .tile{aspect-ratio:1;border-radius:10px;border:1px solid var(--line);display:flex;align-items:flex-end;padding:13px;
+    font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#fff;}
+  .g1{background:linear-gradient(150deg,#ff5a1f,#7a2407);}
+  .g2{background:linear-gradient(150deg,#384150,#171c24);}
+  .g3{background:linear-gradient(150deg,#ff9420,#7a4504);}
+  .g4{background:linear-gradient(150deg,#2a3340,#0f1318);}
+  .gnote{text-align:center;font-size:12.5px;color:var(--mute);margin-top:18px;opacity:.85;}
+
+  /* cta */
+  .join{background:linear-gradient(120deg,#ff5a1f,#ff9420);color:#1a0c03;text-align:center;}
+  .join h2.sec{color:#1a0c03;}
+  .join .lede{color:rgba(26,12,3,.8);}
+  .join .btn-dark{background:#111317;color:var(--fire-2);}
+  .join .btn-dark:hover{background:#000;}
+  .join .addr{margin-top:22px;font-size:14px;color:rgba(26,12,3,.8);}
+
+  /* pitch */
+  .pitch{background:#000;text-align:center;padding:48px 24px;}
+  .pitch .kick{color:var(--fire-2);}
+  .pitch h3{font-size:clamp(23px,5.5vw,31px);font-weight:800;margin:12px auto 0;max-width:25ch;color:#fff;text-transform:uppercase;font-style:italic;letter-spacing:-.01em;}
+  .pitch p{margin:14px auto 0;max-width:46ch;font-size:15.5px;color:#b9c0c9;}
+  .pitch .btn-fire{margin-top:24px;}
+  .sig{margin-top:22px;font-size:14px;color:#98a0ab;}
+  .sig b{color:#fff;font-weight:700;}
+
+  footer.fin{background:#000;text-align:center;padding:22px;font-size:12px;color:#7c828c;border-top:1px solid var(--line);}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
+</style>
+
+<div class="note">✦ <b>Preview website</b> crafted for Iron Jawz Gym by Shubh — scroll to see your gym online.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="tagtop">Mansarovar · Jaipur</div>
+    <h1 class="display">Iron J<span class="o">a</span>wz<br>Gym</h1>
+    <div class="loc">92/194 Shipra Path, Mansarovar — opposite Fire Station</div>
+    <div class="rate"><span class="s">★ 4.5</span> · 182 member reviews</div>
+    <div class="cta-row">
+      <a class="btn btn-fire" href="#join">Book Free Demo</a>
+      <a class="btn btn-ghost" href="#plans">See Plans</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div><div class="v"><span class="f">4.5</span>★</div><div class="k">182 reviews</div></div>
+  <div><div class="v">Free</div><div class="k">Demo class</div></div>
+  <div><div class="v">Pro</div><div class="k">Certified trainers</div></div>
+  <div><div class="v">All</div><div class="k">Levels welcome</div></div>
+</div>
+
+<section class="center">
+  <div class="wrap">
+    <span class="kick">Welcome to the grind</span>
+    <h2 class="sec display">Stronger every single day</h2>
+    <p class="lede">Top-notch equipment, certified trainers and a crew that pushes you. Whether you're starting out or chasing a transformation, Iron Jawz is built for results.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="center"><span class="kick">What we offer</span><h2 class="sec display">Train your way</h2></div>
+    <div class="progs">
+      <div class="prog"><div class="ic"><svg viewBox="0 0 24 24"><path d="M6 7v10M18 7v10M3 9v6M21 9v6M6 12h12"/></svg></div><h3>Bodybuilding</h3><p>Heavy iron, free weights and the guidance to grow.</p></div>
+      <div class="prog"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 100 8 4 4 0 000-8zM5 21v-2a5 5 0 015-5h4a5 5 0 015 5v2"/></svg></div><h3>Personal Training</h3><p>One-on-one plans tailored to your goals and body.</p></div>
+      <div class="prog"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><h3>Cardio &amp; HIIT</h3><p>Burn fat, build stamina, feel unstoppable.</p></div>
+      <div class="prog"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="6" r="2"/><path d="M12 8v6M8 11l4-1 4 1M9 21l3-7 3 7"/></svg></div><h3>Zumba &amp; Aerobics</h3><p>High-energy group classes that make sweating fun.</p></div>
+      <div class="prog"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="M12 7v6m-4 8l4-8 4 8M6 11h12"/></svg></div><h3>Yoga &amp; Mobility</h3><p>Flexibility, balance and recovery for every body.</p></div>
+      <div class="prog"><div class="ic"><svg viewBox="0 0 24 24"><path d="M5 3h14v4H5zM7 7v14M17 7v14M7 14h10"/></svg></div><h3>Nutrition Coaching</h3><p>Diet plans that actually fit your routine and goals.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="mem" id="plans">
+  <div class="wrap">
+    <div class="center"><span class="kick">Membership</span><h2 class="sec display">Pick your plan</h2></div>
+    <div class="plans">
+      <div class="plan">
+        <span class="pn">Monthly</span>
+        <div class="pa">₹1,500<small>/mo</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Full gym access</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Group classes</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Free demo to start</li>
+        </ul>
+      </div>
+      <div class="plan best">
+        <span class="pn">Quarterly</span>
+        <div class="pa">₹4,000<small>/3 mo</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Everything in Monthly</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>1 PT session / week</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Diet consultation</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <span class="pn">Annual</span>
+        <div class="pa">₹12,000<small>/yr</small></div>
+        <ul>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Best value — 4 months free</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Personal training included</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>Full nutrition plan</li>
+        </ul>
+      </div>
+    </div>
+    <p class="mnote">Sample plans for this preview · your real pricing goes here</p>
+  </div>
+</section>
+
+<section class="gal">
+  <div class="wrap center">
+    <span class="kick">Inside the gym</span>
+    <h2 class="sec display">Where results happen</h2>
+    <div class="tiles" aria-hidden="true">
+      <div class="tile g1">Free weights</div>
+      <div class="tile g2">Cardio zone</div>
+      <div class="tile g3">Group classes</div>
+      <div class="tile g4">Training floor</div>
+    </div>
+    <p class="gnote">↑ Your real gym photos will fill these frames in the final website</p>
+  </div>
+</section>
+
+<section class="join" id="join">
+  <div class="wrap">
+    <span class="kick" style="color:rgba(26,12,3,.6);">Start today</span>
+    <h2 class="sec display">Your first session is free</h2>
+    <p class="lede">Walk in for a free demo class, meet the trainers, and feel the energy. No pressure — just come see why 182+ members rate us 4.5★.</p>
+    <div class="cta-row" style="justify-content:center;">
+      <a class="btn btn-dark" href="#">Book Your Free Demo</a>
+    </div>
+    <p class="addr">92/194 Shipra Path, Mansarovar, Jaipur – 302020 (opposite Fire Station)</p>
+  </div>
+</section>
+
+<section class="pitch">
+  <span class="kick">A note for the owner</span>
+  <h3>Like it? This can be your live website this week.</h3>
+  <p>I built this preview specially for Iron Jawz Gym. With your own website, people searching "gym in Mansarovar" find <b>you</b> first — your plans, your trainers, online "book a free demo" so leads come straight to your phone instead of to JustDial. Let's make it live.</p>
+  <a class="btn btn-fire" href="https://wa.me/91XXXXXXXXXX?text=Hi%20Shubh%2C%20I%20saw%20the%20website%20preview%20for%20Iron%20Jawz%20Gym%20%E2%80%94%20let%27s%20talk">Message Shubh on WhatsApp</a>
+  <div class="sig">— <b>Shubh Agarwal</b> · Web Developer · shubh@samaro.ai</div>
+</section>
+
+<footer class="fin">
+  This is a design preview made for Iron Jawz Gym and is not an official page of the gym.
+</footer>

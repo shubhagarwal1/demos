@@ -1,0 +1,280 @@
+<title>The House of Hair — Pune's Celebrity Hair Studio & Academy</title>
+<meta name="description" content="Precision cuts, colour, keratin and bridal styling by Pune's celebrity stylists — plus a professional hairdressing academy. Book at Karve Nagar.">
+
+<style>
+  :root {
+    --black: #16110D;
+    --black-2: #1F1813;
+    --bone: #EFE7DC;
+    --bone-dim: #C9BEB0;
+    --bronze: #C2925A;
+    --bronze-bright: #D9A86B;
+    --oxblood: #5C2A30;
+    --line: rgba(239,231,220,0.14);
+    --ink: #1A1410;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--black);
+    color: var(--bone);
+    font-family: ui-sans-serif, system-ui, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .serif { font-family: Georgia, "Times New Roman", serif; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 26px; }
+
+  h1,h2,h3 { margin: 0; line-height: 1.04; letter-spacing: -0.01em; text-wrap: balance; font-family: Georgia, "Times New Roman", serif; font-weight: 400; }
+  .eyebrow { text-transform: uppercase; letter-spacing: 0.32em; font-size: 11px; font-weight: 700; color: var(--bronze); font-family: ui-sans-serif, system-ui, sans-serif; }
+  a { color: inherit; text-decoration: none; }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 9px; cursor: pointer;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-weight: 600; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+    padding: 15px 28px; border-radius: 2px; border: 1px solid var(--bronze);
+  }
+  .btn-solid { background: var(--bronze); color: var(--black); }
+  .btn-solid:hover { background: var(--bronze-bright); border-color: var(--bronze-bright); }
+  .btn-line { color: var(--bone); }
+  .btn-line:hover { background: rgba(194,146,90,0.12); }
+
+  /* nav */
+  nav {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(22,17,13,0.85); backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-in { display: flex; align-items: center; justify-content: space-between; padding: 16px 26px; max-width: 1120px; margin: 0 auto; }
+  .logo { display: flex; align-items: baseline; gap: 9px; }
+  .logo .mark { font-family: Georgia, serif; font-size: 23px; letter-spacing: -0.02em; }
+  .logo .mark b { color: var(--bronze); font-weight: 400; font-style: italic; }
+  .logo .sub { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--bone-dim); }
+  .nav-links { display: flex; gap: 30px; font-size: 13px; letter-spacing: 0.05em; }
+  .nav-links a { color: var(--bone-dim); }
+  .nav-links a:hover { color: var(--bronze); }
+  .nav-cta { display: inline-flex; }
+  @media (max-width: 760px){ .nav-links { display: none; } }
+
+  /* hero */
+  .hero { position: relative; overflow: hidden; padding: 96px 0 104px; }
+  .hero::before {
+    content: ""; position: absolute; inset: 0;
+    background:
+      radial-gradient(60% 80% at 78% 18%, rgba(194,146,90,0.22), transparent 60%),
+      radial-gradient(50% 60% at 8% 90%, rgba(92,42,48,0.4), transparent 60%);
+    pointer-events: none;
+  }
+  .hero-in { position: relative; }
+  .hero h1 { font-size: clamp(42px, 8vw, 92px); line-height: 0.98; }
+  .hero h1 .it { font-style: italic; color: var(--bronze); }
+  .hero .kicker { margin-bottom: 26px; }
+  .hero p { max-width: 50ch; color: var(--bone-dim); font-size: 18px; margin: 28px 0 0; }
+  .hero .cta-row { display: flex; gap: 14px; margin-top: 38px; flex-wrap: wrap; }
+  .hero .meta { display: flex; gap: 34px; margin-top: 54px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 26px; }
+  .hero .meta div .n { font-family: Georgia, serif; font-size: 30px; color: var(--bronze); }
+  .hero .meta div .l { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--bone-dim); }
+
+  /* sections */
+  section { padding: 96px 0; }
+  .sec-head { max-width: 60ch; }
+  .sec-head h2 { font-size: clamp(30px, 4.5vw, 48px); margin-top: 16px; }
+  .sec-head p { color: var(--bone-dim); margin-top: 16px; font-size: 17px; }
+
+  .band-light { background: var(--bone); color: var(--ink); }
+  .band-light .eyebrow { color: var(--oxblood); }
+  .band-light .sec-head p { color: #5b5147; }
+  .band-light .price-row { border-color: rgba(26,20,16,0.12); }
+  .band-light .price-row .dots { border-color: rgba(26,20,16,0.22); }
+  .band-light .price-row .name small { color: #7a6e60; }
+
+  /* services price list */
+  .prices { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 64px; margin-top: 48px; }
+  .price-row { display: flex; align-items: baseline; gap: 12px; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .price-row .name { font-family: Georgia, serif; font-size: 20px; white-space: nowrap; }
+  .price-row .name small { display: block; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 12.5px; color: var(--bone-dim); letter-spacing: 0.02em; }
+  .price-row .dots { flex: 1; border-bottom: 1px dotted rgba(0,0,0,0.25); transform: translateY(-4px); }
+  .price-row .amt { font-family: Georgia, serif; font-size: 20px; color: var(--oxblood); font-variant-numeric: tabular-nums; white-space: nowrap; }
+  @media (max-width: 720px){ .prices { grid-template-columns: 1fr; gap: 0 0; } }
+
+  /* team */
+  .team-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; margin-top: 48px; }
+  .member { text-align: center; }
+  .avatar {
+    width: 100%; aspect-ratio: 3/4; border-radius: 3px; display: grid; place-items: center;
+    font-family: Georgia, serif; font-size: 46px; color: var(--bronze);
+    background: linear-gradient(160deg, var(--black-2), #2a211a);
+    border: 1px solid var(--line); margin-bottom: 14px;
+  }
+  .member .nm { font-family: Georgia, serif; font-size: 19px; }
+  .member .rl { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bone-dim); margin-top: 2px; }
+  @media (max-width: 760px){ .team-grid { grid-template-columns: repeat(2, 1fr); } }
+
+  /* academy */
+  .acad { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+  .acad-list { list-style: none; padding: 0; margin: 30px 0 0; display: grid; gap: 14px; }
+  .acad-list li { display: flex; gap: 14px; align-items: baseline; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+  .acad-list .no { font-family: Georgia, serif; color: var(--bronze); font-size: 15px; }
+  .acad-card { background: var(--oxblood); border-radius: 4px; padding: 44px; }
+  .acad-card h3 { font-size: 30px; color: var(--bone); }
+  .acad-card p { color: rgba(239,231,220,0.82); margin: 14px 0 24px; }
+  @media (max-width: 820px){ .acad { grid-template-columns: 1fr; gap: 32px; } }
+
+  /* testimonials */
+  .quotes { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-top: 48px; }
+  .quote { border: 1px solid rgba(26,20,16,0.14); border-radius: 4px; padding: 28px; }
+  .quote .stars { color: var(--bronze); letter-spacing: 3px; font-size: 14px; }
+  .quote p { font-family: Georgia, serif; font-size: 18px; font-style: italic; margin: 14px 0; line-height: 1.45; }
+  .quote .who { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #7a6e60; }
+  @media (max-width: 820px){ .quotes { grid-template-columns: 1fr; } }
+
+  /* book */
+  .book { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  .book .info p { color: var(--bone-dim); margin: 6px 0; }
+  .book .info .k { color: var(--bronze); font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; margin-top: 22px; }
+  .book .info a.tel { font-family: Georgia, serif; font-size: 30px; color: var(--bone); }
+  .hours { border: 1px solid var(--line); border-radius: 4px; padding: 32px; }
+  .hours .row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .hours .row:last-child { border: 0; }
+  .hours .row span:last-child { color: var(--bronze); }
+  @media (max-width: 820px){ .book { grid-template-columns: 1fr; gap: 32px; } }
+
+  footer { border-top: 1px solid var(--line); padding: 40px 0; color: var(--bone-dim); font-size: 13px; text-align: center; }
+  footer .it { font-style: italic; color: var(--bronze); }
+
+  :focus-visible { outline: 2px solid var(--bronze); outline-offset: 3px; }
+</style>
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="#top">
+      <span class="mark serif">The House of <b>Hair</b></span>
+      <span class="sub">Pune</span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#team">The Team</a>
+      <a href="#academy">Academy</a>
+      <a href="#book">Contact</a>
+    </div>
+    <a class="btn btn-solid nav-cta" href="#book">Book a Chair</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="eyebrow kicker">Celebrity Hair Studio &nbsp;·&nbsp; Est. Karve Nagar, Pune</div>
+    <h1 class="serif">Hair that turns<br>heads, cut by<br><span class="it">people who</span> care.</h1>
+    <p>Precision cuts, lived-in colour, keratin and bridal styling — shaped by Shubh'z and a team Pune trusts. Walk in unsure, walk out unforgettable.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#book">Book an appointment</a>
+      <a class="btn btn-line" href="#services">View services &amp; prices</a>
+    </div>
+    <div class="meta">
+      <div><div class="n serif">12+</div><div class="l">Years styling Pune</div></div>
+      <div><div class="n serif">5</div><div class="l">Specialist stylists</div></div>
+      <div><div class="n serif">4.8★</div><div class="l">Client rating</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="band-light" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The Menu</div>
+      <h2 class="serif">Every service, done with intention.</h2>
+      <p>Indicative pricing — final quote depends on hair length & condition, confirmed at your consultation.</p>
+    </div>
+    <div class="prices">
+      <div class="price-row"><span class="name serif">Haircut &amp; Style<small>Women's · wash, cut, blow-dry</small></span><span class="dots"></span><span class="amt serif">₹400</span></div>
+      <div class="price-row"><span class="name serif">Men's Cut &amp; Beard<small>Shape-up & styling</small></span><span class="dots"></span><span class="amt serif">₹200</span></div>
+      <div class="price-row"><span class="name serif">Global Colour<small>Single-process, ammonia-free</small></span><span class="dots"></span><span class="amt serif">₹2,000+</span></div>
+      <div class="price-row"><span class="name serif">Balayage / Highlights<small>Hand-painted, lived-in</small></span><span class="dots"></span><span class="amt serif">₹3,500+</span></div>
+      <div class="price-row"><span class="name serif">Keratin / Smoothening<small>Frizz-free for months</small></span><span class="dots"></span><span class="amt serif">₹2,500+</span></div>
+      <div class="price-row"><span class="name serif">Hair Spa &amp; Treatment<small>Deep nourishment ritual</small></span><span class="dots"></span><span class="amt serif">₹700+</span></div>
+      <div class="price-row"><span class="name serif">Bridal &amp; Party Makeup<small>By Aditi</small></span><span class="dots"></span><span class="amt serif">₹4,000+</span></div>
+      <div class="price-row"><span class="name serif">Bridal Hair Styling<small>Trial included</small></span><span class="dots"></span><span class="amt serif">₹2,500+</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="team">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">The Artists</div>
+      <h2 class="serif">The hands behind the chair.</h2>
+      <p>A small, specialised team — so you always know who's cutting your hair.</p>
+    </div>
+    <div class="team-grid">
+      <div class="member"><div class="avatar">S</div><div class="nm serif">Shubh'z</div><div class="rl">Founder · Stylist</div></div>
+      <div class="member"><div class="avatar">A</div><div class="nm serif">Aditi</div><div class="rl">Makeup Artist</div></div>
+      <div class="member"><div class="avatar">N</div><div class="nm serif">Nasy</div><div class="rl">Hair Spa Specialist</div></div>
+      <div class="member"><div class="avatar">M</div><div class="nm serif">Mayur</div><div class="rl">Men's Grooming</div></div>
+      <div class="member"><div class="avatar">A</div><div class="nm serif">Amy</div><div class="rl">Colour · Beard</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band-light" id="academy">
+  <div class="wrap acad">
+    <div>
+      <div class="eyebrow">The Academy</div>
+      <h2 class="serif" style="font-size:clamp(30px,4.5vw,46px);margin-top:14px;">Learn the craft from a working salon.</h2>
+      <p style="color:#5b5147;margin-top:16px;font-size:17px;">Train where real clients sit. Our programmes put scissors in your hand from day one, with placement guidance when you graduate.</p>
+      <ul class="acad-list">
+        <li><span class="no serif">01</span><span><b>Diploma in Hairdressing</b> — the complete foundation, cut to colour.</span></li>
+        <li><span class="no serif">02</span><span><b>Advanced Haircuts</b> — modern techniques & precision.</span></li>
+        <li><span class="no serif">03</span><span><b>Advanced Colour</b> — balayage, correction & creative work.</span></li>
+        <li><span class="no serif">04</span><span><b>Barbering</b> — fades, beards & men's grooming.</span></li>
+      </ul>
+    </div>
+    <div class="acad-card">
+      <div class="eyebrow" style="color:var(--bronze-bright);">Enrolling now</div>
+      <h3 class="serif">Turn passion into a profession.</h3>
+      <p>Limited seats per batch for proper attention. Request the syllabus & fee structure.</p>
+      <a class="btn btn-solid" href="#book">Request details</a>
+    </div>
+  </div>
+</section>
+
+<section class="band-light" style="padding-top:0;">
+  <div class="wrap">
+    <div class="sec-head"><div class="eyebrow">Kind Words</div><h2 class="serif">Loved by Pune.</h2></div>
+    <div class="quotes">
+      <div class="quote"><div class="stars">★★★★★</div><p>"Excellent service and so hygienic. Shubh'z understood exactly what I wanted."</p><div class="who">— Verified client</div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Superb team, barely any wait when you book ahead. My go-to in Pune."</p><div class="who">— Verified client</div></div>
+      <div class="quote"><div class="stars">★★★★★</div><p>"Talented staff and a lovely space. My colour came out perfect."</p><div class="who">— Verified client</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap book">
+    <div class="info">
+      <div class="eyebrow">Visit / Book</div>
+      <h2 class="serif" style="font-size:clamp(30px,4.5vw,46px);margin:14px 0 22px;">Reserve your chair.</h2>
+      <p>Shop no. 86, Girija Shankar Vihar Society,<br>Potnis Parisar, opp. Durga Cafe, Pune 411052</p>
+      <div class="k">Call or WhatsApp</div>
+      <a class="tel serif" href="tel:+918850327158">+91 88503 27158</a>
+      <div class="k">Email</div>
+      <p><a href="mailto:reach.thehouseofhair@gmail.com">reach.thehouseofhair@gmail.com</a></p>
+      <div class="cta-row" style="margin-top:26px;"><a class="btn btn-solid" href="tel:+918850327158">Book now</a></div>
+    </div>
+    <div class="hours">
+      <div class="eyebrow" style="margin-bottom:16px;display:block;">Opening Hours</div>
+      <div class="row"><span>Monday</span><span>Closed</span></div>
+      <div class="row"><span>Tue – Fri</span><span>10:00 – 20:00</span></div>
+      <div class="row"><span>Saturday</span><span>09:00 – 21:00</span></div>
+      <div class="row"><span>Sunday</span><span>09:00 – 20:00</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="serif" style="font-size:18px;">The House of <span class="it">Hair</span></span> · Karve Nagar, Pune · @thehouseofhairbyshubhz<br>
+    <span style="opacity:0.7;">Celebrity hair studio &amp; academy</span>
+  </div>
+</footer>

@@ -1,0 +1,179 @@
+<title>[Business Name] — Website Preview</title>
+<meta name="description" content="A website preview crafted for a local eatery — by Shubh Agarwal.">
+
+<style>
+  :root{
+    --bg:#14110d;
+    --bg-2:#1d1813;
+    --paper:#fdfaf3;
+    --ink:#221c14;
+    --mute:#7a7163;
+    --cream:#f1e8d6;
+    --olive:#5f6b3a;
+    --rust:#c2552e;
+    --rust-d:#9c3f1f;
+    --gold:#d99a3a;
+    --line:#e6ddca;
+    --line-d:rgba(217,154,58,.22);
+    --maxw:840px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+  h1,h2,h3{margin:0;line-height:1.05;text-wrap:balance;}
+  .fill{background:rgba(217,154,58,.18);border-bottom:1px dashed var(--gold);padding:0 2px;border-radius:2px;}
+
+  .note{background:var(--bg);color:#cdbfa5;text-align:center;font-size:13px;padding:11px 18px;border-bottom:1px solid var(--line-d);}
+  .note b{color:var(--gold);}
+
+  .hero{background:radial-gradient(120% 80% at 50% 0%, rgba(217,154,58,.16), transparent 55%),linear-gradient(180deg,var(--bg-2),var(--bg));
+    color:var(--cream);text-align:center;padding:62px 0 54px;}
+  .estd{font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);}
+  .hero h1{font-size:clamp(38px,11vw,72px);font-weight:500;margin:16px 0 0;color:#fff;}
+  .hero .tag{font-size:clamp(15px,4vw,18px);color:#cdbfa5;margin:18px auto 0;max-width:34ch;}
+  .rate{display:inline-flex;align-items:center;gap:9px;margin-top:20px;background:rgba(217,154,58,.12);border:1px solid var(--line-d);border-radius:999px;padding:8px 16px;font-size:14px;}
+  .rate .s{color:var(--gold);}
+  .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:28px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:700;padding:13px 26px;border-radius:8px;text-decoration:none;cursor:pointer;transition:transform .12s,background .15s;}
+  .btn:active{transform:translateY(1px);}
+  .btn-solid{background:var(--gold);color:#211806;}
+  .btn-solid:hover{background:#e8ab50;}
+  .btn-out{border:1px solid var(--line-d);color:var(--cream);}
+  .btn-out:hover{background:rgba(217,154,58,.1);}
+
+  .strip{display:grid;grid-template-columns:repeat(2,1fr);background:var(--bg);border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d);color:var(--cream);}
+  @media(min-width:640px){.strip{grid-template-columns:repeat(4,1fr);}}
+  .strip>div{padding:20px 12px;text-align:center;border-right:1px solid var(--line-d);}
+  .strip .k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);}
+  .strip .v{font-size:15px;margin-top:5px;}
+
+  section{padding:58px 0;}
+  .center{text-align:center;}
+  .kick{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--rust-d);}
+  h2.sec{font-size:clamp(27px,6.5vw,40px);font-weight:500;margin-top:13px;}
+  .lede{color:var(--mute);margin:16px auto 0;max-width:54ch;font-size:16.5px;}
+
+  .menu{margin-top:34px;}
+  .dish{display:flex;align-items:baseline;gap:14px;padding:18px 4px;border-bottom:1px dashed var(--line);}
+  .dish:first-child{border-top:1px dashed var(--line);}
+  .dish .nm{font-size:19px;}
+  .dish .ds{display:block;font-size:13.5px;color:var(--mute);margin-top:4px;}
+  .dish .dots{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px);min-width:16px;}
+  .dish .pr{font-size:17px;color:var(--rust-d);font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .mnote{text-align:center;font-size:12.5px;color:var(--mute);margin-top:20px;opacity:.85;}
+
+  .gal{background:var(--bg-2);color:var(--cream);}
+  .tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:30px;}
+  @media(min-width:640px){.tiles{grid-template-columns:repeat(4,1fr);}}
+  .tile{aspect-ratio:1;border-radius:10px;border:1px solid var(--line-d);display:flex;align-items:flex-end;padding:13px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#fff;font-weight:600;}
+  .t1{background:linear-gradient(150deg,var(--rust),#6e2814);}
+  .t2{background:linear-gradient(150deg,var(--olive),#363f1f);}
+  .t3{background:linear-gradient(150deg,var(--gold),#7a541a);}
+  .t4{background:linear-gradient(150deg,#7a5230,#3a2415);}
+  .gnote{text-align:center;font-size:12.5px;color:#cdbfa5;margin-top:18px;opacity:.85;}
+
+  .find{background:var(--bg);color:var(--cream);text-align:center;}
+  .find .kick{color:var(--gold);}
+  .find h2.sec{color:#fff;}
+  .find .lede{color:#cdbfa5;}
+  .links{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:26px;}
+  .addr{color:#cdbfa5;margin-top:22px;font-size:15px;}
+
+  .pitch{background:var(--gold);color:#211806;text-align:center;padding:48px 24px;}
+  .pitch .kick{color:rgba(33,24,6,.6);}
+  .pitch h3{font-size:clamp(23px,5.5vw,31px);font-weight:600;margin:12px auto 0;max-width:25ch;}
+  .pitch p{margin:14px auto 0;max-width:46ch;font-size:15.5px;color:rgba(33,24,6,.82);}
+  .btn-dark{background:#14110d;color:var(--gold);margin-top:24px;}
+  .btn-dark:hover{background:#000;}
+  .sig{margin-top:22px;font-size:14px;color:rgba(33,24,6,.8);}
+  .sig b{font-weight:700;}
+
+  footer.fin{background:var(--bg-2);text-align:center;padding:22px;font-size:12px;color:#9a8f7c;}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*{transition:none!important;}}
+</style>
+
+<div class="note">✦ <b>Preview website</b> crafted for <span class="fill">[Business Name]</span> by Shubh — scroll to see how your spot could look online.</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="estd"><span class="fill">[City, State]</span> · Est. <span class="fill">[Year]</span></div>
+    <h1 class="serif"><span class="fill">[Business Name]</span></h1>
+    <p class="tag"><span class="fill">[One-line tagline — e.g. "Wood-fired pizza &amp; cold brews on the east side."]</span></p>
+    <div class="rate"><span class="s">★ <span class="fill">[4.7]</span></span> · <span class="fill">[300+]</span> Google reviews</div>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#menu">View Menu</a>
+      <a class="btn btn-out" href="#find">Find Us</a>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div><div class="k">Hours</div><div class="v"><span class="fill">[11–9 daily]</span></div></div>
+  <div><div class="k">Known for</div><div class="v"><span class="fill">[Burgers]</span></div></div>
+  <div><div class="k">Vibe</div><div class="v"><span class="fill">[Family-owned]</span></div></div>
+  <div><div class="k">Where</div><div class="v"><span class="fill">[Neighborhood]</span></div></div>
+</div>
+
+<section class="center">
+  <div class="wrap">
+    <span class="kick">Welcome</span>
+    <h2 class="sec serif">A local favorite, <span class="fill">[since 19XX]</span></h2>
+    <p class="lede"><span class="fill">[2–3 lines about the place — what people love, the story, the feeling. Pull this from their Google/Yelp reviews.]</span></p>
+  </div>
+</section>
+
+<section id="menu" style="padding-top:0;">
+  <div class="wrap">
+    <div class="center"><span class="kick">From the Kitchen</span><h2 class="sec serif">What we're known for</h2></div>
+    <div class="menu">
+      <div class="dish"><span class="nm serif"><span class="fill">[Signature Dish]</span><span class="ds"><span class="fill">[Short mouth-watering description]</span></span></span><span class="dots"></span><span class="pr">$<span class="fill">[12]</span></span></div>
+      <div class="dish"><span class="nm serif"><span class="fill">[Dish 2]</span><span class="ds"><span class="fill">[Description]</span></span></span><span class="dots"></span><span class="pr">$<span class="fill">[10]</span></span></div>
+      <div class="dish"><span class="nm serif"><span class="fill">[Dish 3]</span><span class="ds"><span class="fill">[Description]</span></span></span><span class="dots"></span><span class="pr">$<span class="fill">[9]</span></span></div>
+      <div class="dish"><span class="nm serif"><span class="fill">[Dish 4]</span><span class="ds"><span class="fill">[Description]</span></span></span><span class="dots"></span><span class="pr">$<span class="fill">[8]</span></span></div>
+    </div>
+    <p class="mnote">A taste of the menu · pull real items &amp; prices from their Yelp/Facebook</p>
+  </div>
+</section>
+
+<section class="gal">
+  <div class="wrap center">
+    <span class="kick">A Look Inside</span>
+    <h2 class="sec serif">The experience</h2>
+    <div class="tiles" aria-hidden="true">
+      <div class="tile t1"><span class="fill">[Dish]</span></div>
+      <div class="tile t2"><span class="fill">[Interior]</span></div>
+      <div class="tile t3"><span class="fill">[Drinks]</span></div>
+      <div class="tile t4"><span class="fill">[Patio]</span></div>
+    </div>
+    <p class="gnote">↑ Their real photos will fill these frames in the final website</p>
+  </div>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <span class="kick">Find Us</span>
+    <h2 class="sec serif">Come on by</h2>
+    <p class="lede">Open <span class="fill">[hours]</span> — dine in, take out, or order ahead.</p>
+    <div class="links">
+      <a class="btn btn-solid" href="#">Get Directions</a>
+      <a class="btn btn-out" href="#">Call <span class="fill">[number]</span></a>
+    </div>
+    <p class="addr"><span class="fill">[Full street address, City, State ZIP]</span></p>
+  </div>
+</section>
+
+<section class="pitch">
+  <span class="kick">A note for the owner</span>
+  <h3>Like it? This can be your live website this week.</h3>
+  <p>I built this preview specially for <span class="fill">[Business Name]</span>. With your own website, people who Google "<span class="fill">[food] near me</span>" find <b>you</b> first — your menu, your photos, your hours, and online ordering — instead of a third-party app that takes a cut. Let's make it live.</p>
+  <a class="btn btn-dark" href="mailto:shubh@samaro.ai?subject=Website%20for%20[Business%20Name]">Email Shubh to get started</a>
+  <div class="sig">— <b>Shubh Agarwal</b> · Web Developer · shubh@samaro.ai</div>
+</section>
+
+<footer class="fin">
+  This is a design preview made for <span class="fill">[Business Name]</span> and is not an official page of the business.
+</footer>
